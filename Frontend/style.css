@@ -1,0 +1,675 @@
+/* ===================================================================
+   JSONPlaceholder Clone — style.css
+   Design system + all component styles
+   =================================================================== */
+
+/* ─── Google Fonts ──────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* ─── CSS Custom Properties (Light Mode) ───────────────────────── */
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
+
+  /* Colors */
+  --color-bg:         #ffffff;
+  --color-bg-deep:    #f9f8f6;
+  --color-ink:        #1a1a1a;
+  --color-ink-soft:   #4b5563;
+  --color-muted:      #6b7280;
+  --color-rule:       #e5e7eb;
+  --color-clay:       #c97a4e;
+  --color-clay-hover: #b86a3e;
+  --color-sage:       #5a9e6a;
+  --color-code-bg:    #f5f5f0;
+  --color-code-key:   #b8a965;
+  --color-code-str:   #c98a7d;
+  --color-code-num:   #4c9a91;
+  --color-code-fn:    #80a665;
+  --color-code-cm:    #758575;
+  --color-code-base:  #393a34;
+
+  /* Spacing */
+  --page-max-width: 768px;
+  --page-pad: 1.5rem;
+
+  /* Transition */
+  --transition: 150ms ease;
+}
+
+/* ─── Dark Mode ─────────────────────────────────────────────────── */
+html.dark {
+  --color-bg:         #121212;
+  --color-bg-deep:    #1a1a1a;
+  --color-ink:        #dbd7ca;
+  --color-ink-soft:   #9a9590;
+  --color-muted:      #757575;
+  --color-rule:       #2a2a2a;
+  --color-clay:       #c97a4e;
+  --color-clay-hover: #e08a5e;
+  --color-sage:       #6ab07a;
+  --color-code-bg:    #1a1a1a;
+  --color-code-key:   #b8a965;
+  --color-code-str:   #c98a7d;
+  --color-code-num:   #4c9a91;
+  --color-code-fn:    #80a665;
+  --color-code-cm:    #758575dd;
+  --color-code-base:  #dbd7caee;
+}
+
+/* ─── Reset / Base ──────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  line-height: 1.6;
+  transition: background-color var(--transition), color var(--transition);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not(.plain):hover {
+  text-decoration: underline;
+}
+
+/* Ensure [hidden] always wins over display:flex/block parents */
+[hidden] {
+  display: none !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ─── Layout ────────────────────────────────────────────────────── */
+.page {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+}
+
+/* ─── Header ────────────────────────────────────────────────────── */
+.site-header {
+  border-bottom: 1px solid var(--color-rule);
+  transition: border-color var(--transition);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.site-brand {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+  transition: color var(--transition);
+}
+
+.site-brand:hover {
+  color: var(--color-clay);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1.25rem;
+}
+
+.site-nav a {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  transition: color var(--transition);
+}
+
+.site-nav a:hover {
+  color: var(--color-clay);
+  text-decoration: none;
+}
+
+/* Dark mode toggle */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--color-rule);
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  line-height: 1;
+  transition: border-color var(--transition), color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-clay);
+  color: var(--color-clay);
+}
+
+.theme-icon-dark  { display: inline; }
+.theme-icon-light { display: none;   }
+
+html.dark .theme-icon-dark  { display: none;   }
+html.dark .theme-icon-light { display: inline; }
+
+/* ─── Main / Sections ───────────────────────────────────────────── */
+main {
+  padding-bottom: 4rem;
+}
+
+section {
+  padding-top: 3.5rem;
+}
+
+/* ─── Typography ────────────────────────────────────────────────── */
+.eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-clay);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 2.875rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-top: 0.75rem;
+  color: var(--color-ink);
+}
+
+h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--color-ink);
+}
+
+.lead {
+  margin-top: 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-ink-soft);
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+.subtext {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+.subtext a {
+  color: var(--color-clay);
+}
+
+.subtext a:hover {
+  text-decoration: underline;
+}
+
+/* ─── Stats Grid ────────────────────────────────────────────────── */
+.stats-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 1.75rem;
+  border-top: 1px solid var(--color-rule);
+  padding-top: 1.75rem;
+  transition: border-color var(--transition);
+}
+
+@media (min-width: 540px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.stat-value {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.stat-unit {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-muted);
+  margin-left: 0.2rem;
+}
+
+.stat-desc {
+  margin-top: 0.4rem;
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.stat-desc strong {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+/* ─── Copy URL Button ───────────────────────────────────────────── */
+.copy-url-wrap {
+  margin-top: 1.75rem;
+}
+
+.copy-url-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 8px;
+  background: var(--color-bg-deep);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition), color var(--transition);
+}
+
+.copy-url-btn:hover {
+  border-color: var(--color-clay);
+  color: var(--color-ink);
+}
+
+/* ── Copied! success state ── */
+.copy-url-btn--copied {
+  border-color: var(--color-sage) !important;
+  color: var(--color-sage) !important;
+  background: color-mix(in srgb, var(--color-sage) 8%, var(--color-bg-deep));
+}
+
+.copy-url-btn--copied .copy-icon {
+  color: var(--color-sage);
+}
+
+/* check SVG only gets sage color when in copied state */
+.copy-url-btn--copied #copy-url-icon-check {
+  color: var(--color-sage);
+}
+
+/* "Copied!" label text */
+.copy-url-copied-label {
+  color: var(--color-sage);
+  font-weight: 500;
+}
+
+/* ── Error state ── */
+.copy-url-btn--error {
+  border-color: #e05252 !important;
+  color: #e05252 !important;
+}
+
+.copy-url-btn .copy-icon {
+  color: var(--color-muted);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  transition: color var(--transition);
+}
+
+/* ─── Powered-by badges ─────────────────────────────────────────── */
+.powered-by {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+.repo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 6px;
+  background: var(--color-bg-deep);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  transition: border-color var(--transition);
+}
+
+.repo-badge:hover {
+  border-color: var(--color-clay);
+  text-decoration: none;
+}
+
+.repo-badge .stars {
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+/* ─── Sponsors ──────────────────────────────────────────────────── */
+#sponsors {
+  padding-top: 3rem;
+}
+
+.sponsor-row {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 2.5rem;
+}
+
+.sponsor-logo {
+  display: inline-flex;
+  align-items: center;
+  transition: opacity var(--transition);
+}
+
+.sponsor-logo:hover {
+  opacity: 0.75;
+}
+
+.sponsor-logo img {
+  height: 28px;
+  width: auto;
+  filter: var(--logo-filter, none);
+}
+
+html.dark .sponsor-logo img {
+  filter: brightness(0) invert(1) opacity(0.75);
+}
+
+.sponsor-cta {
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  border: 1px dashed var(--color-rule);
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.sponsor-cta:hover {
+  border-color: var(--color-clay);
+  color: var(--color-clay);
+  text-decoration: none;
+}
+
+/* ─── Guide / Tabs ──────────────────────────────────────────────── */
+#guide {
+  padding-top: 3rem;
+}
+
+.tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 1px solid var(--color-rule);
+  margin-top: 1.25rem;
+  transition: border-color var(--transition);
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  padding: 0.6rem 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: var(--color-ink);
+}
+
+.tab-btn[aria-selected="true"] {
+  border-bottom-color: var(--color-clay);
+  color: var(--color-ink);
+}
+
+/* ─── Code Blocks ───────────────────────────────────────────────── */
+.tab-panel {
+  margin-top: 1rem;
+}
+
+.code-block-wrap {
+  position: relative;
+}
+
+pre {
+  background: var(--color-code-bg);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.825rem;
+  line-height: 1.6;
+  color: var(--color-code-base);
+  transition: background var(--transition), color var(--transition);
+  tab-size: 2;
+}
+
+code {
+  font-family: inherit;
+}
+
+/* Syntax tokens */
+.tk-fn   { color: var(--color-code-fn);  }
+.tk-str  { color: var(--color-code-str); }
+.tk-num  { color: var(--color-code-num); }
+.tk-key  { color: var(--color-code-key); }
+.tk-cm   { color: var(--color-code-cm);  font-style: italic; }
+.tk-pun  { color: var(--color-muted);    }
+.tk-kw   { color: var(--color-code-str); }
+
+.response-label {
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.response-note {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* Copy button on code blocks */
+.copy-code-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  padding: 0.3rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: color var(--transition);
+}
+
+.copy-code-btn:hover {
+  color: var(--color-clay);
+}
+
+.copy-code-btn svg {
+  width: 15px;
+  height: 15px;
+  pointer-events: none;
+}
+
+/* ─── Resources Table ───────────────────────────────────────────── */
+#resources {
+  padding-top: 3rem;
+}
+
+.resources-table-wrap {
+  margin-top: 1.25rem;
+  overflow-x: auto;
+  border: 1px solid var(--color-rule);
+  border-radius: 8px;
+  transition: border-color var(--transition);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+thead th {
+  text-align: left;
+  padding: 0.7rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  background: var(--color-bg-deep);
+  border-bottom: 1px solid var(--color-rule);
+  transition: background var(--transition), border-color var(--transition);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--color-rule);
+  transition: background var(--transition), border-color var(--transition);
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: var(--color-bg-deep);
+}
+
+tbody td {
+  padding: 0.7rem 1rem;
+  color: var(--color-ink-soft);
+}
+
+tbody td:first-child {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-clay);
+  font-weight: 500;
+}
+
+tbody td:first-child a {
+  color: inherit;
+  transition: opacity var(--transition);
+}
+
+tbody td:first-child a:hover {
+  opacity: 0.75;
+  text-decoration: none;
+}
+
+.count-badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  background: var(--color-bg-deep);
+  border: 1px solid var(--color-rule);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  font-weight: 500;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+/* ─── Footer ────────────────────────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid var(--color-rule);
+  margin-top: 4rem;
+  padding: 1.5rem var(--page-pad);
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  transition: border-color var(--transition);
+}
+
+.site-footer a {
+  color: var(--color-clay);
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ─── Copy feedback ─────────────────────────────────────────────── */
+.copied-check {
+  color: var(--color-sage) !important;
+}
+
+/* ─── Smooth hover micro-animations ────────────────────────────── */
+.repo-badge,
+.copy-url-btn,
+.sponsor-cta,
+.tab-btn,
+.copy-code-btn {
+  will-change: transform;
+}
+
+.repo-badge:active,
+.copy-url-btn:active {
+  transform: scale(0.97);
+}
+
+/* ─── Responsive helpers ─────────────────────────────────────────── */
+@media (max-width: 480px) {
+  :root {
+    --page-pad: 1rem;
+  }
+
+  .header-inner {
+    gap: 0.5rem;
+  }
+
+  .tab-btn {
+    padding: 0.5rem 0.65rem;
+    font-size: 0.8rem;
+  }
+}

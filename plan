@@ -1,0 +1,20 @@
+make to plan make same website :https://jsonplaceholder.typicode.com/
+
+
+
+JSONPlaceholder
+│
+├── Frontend  <--- folder
+│   ├── HTML
+│   ├── CSS
+│   └── JavaScript
+│
+└── Backend   <---folder
+    ├── Node.js
+    ├── Express
+    ├── JSON Server
+    ├── LowDB
+    └── data.json
+
+make same website clean ui as same website tu me same bana hai jada kuch nhi kr na gotit
+

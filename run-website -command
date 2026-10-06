@@ -1,0 +1,50 @@
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🚀 JSONPlaceholder Clone — Run Commands
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+──────────────────────────────────────────────
+  STEP 1 — Install dependencies (only once)
+──────────────────────────────────────────────
+
+  cd d:\2026\2026\2026\sponser-web\Backend
+  npm install
+
+
+──────────────────────────────────────────────
+  STEP 2 — Start the Backend server
+──────────────────────────────────────────────
+
+  cd d:\2026\2026\2026\sponser-web\Backend
+  node server.js
+
+
+──────────────────────────────────────────────
+  STEP 3 — Frontend (no build needed)
+──────────────────────────────────────────────
+
+  Frontend files are served automatically by
+  the backend server as static files.
+
+  ✅ No separate command needed for frontend.
+
+
+──────────────────────────────────────────────
+  🌐 Open in your browser
+──────────────────────────────────────────────
+
+  http://localhost:3000
+
+
+──────────────────────────────────────────────
+  📡 API Endpoints (test in browser/Postman)
+──────────────────────────────────────────────
+
+  http://localhost:3000/posts
+  http://localhost:3000/comments
+  http://localhost:3000/albums
+  http://localhost:3000/photos
+  http://localhost:3000/todos
+  http://localhost:3000/users
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
