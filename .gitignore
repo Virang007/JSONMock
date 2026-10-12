@@ -6,3 +6,8 @@ yarn-error.log*
 .env
 .env.local
 .env.*.local
+domin-name
+fix-bug-plan
+plan
+run-website -command
+ui-plan

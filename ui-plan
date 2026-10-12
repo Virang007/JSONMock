@@ -36,3 +36,5 @@ Use the existing project and current UI as the starting point. Do not follow the
 The website should still look and feel like the existing website, not a completely new premium product. Make a few carefully selected changes to the text, branding, styling, and minor layout details so the result feels original while preserving the existing design and functionality.
 
 **Important:** Make the smallest set of changes needed. Do not overdesign, overengineer, or add features just because they appear in the larger redesign plan. After implementation, verify that all existing endpoints and UI interactions still work.
+
+//

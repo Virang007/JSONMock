@@ -163,3 +163,5 @@ At completion, report:
 7. Commands to regenerate and validate the data.
 
 **Final rule:** The existing mock API structure must remain compatible, but the data itself must look like a professionally prepared application dataset. No Latin gibberish, meaningless titles, fake human names presented as verified people, placeholder images, invented photo hashes, or unverified claims of successful image loading.
+
+//
