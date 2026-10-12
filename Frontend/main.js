@@ -1,5 +1,5 @@
 /* ===================================================================
-   JSONPlaceholder Clone — main.js
+   TypiStack — main.js
    Handles: dark mode toggle, tab switching, copy-to-clipboard
    =================================================================== */
 
@@ -68,6 +68,22 @@
   const iconCopyEl   = document.getElementById('copy-url-icon-copy')
   const iconCheckEl  = document.getElementById('copy-url-icon-check')
   const copyStatusEl = document.getElementById('copy-status')
+
+  // Auto-detect base URL (localhost in dev or live domain on Vercel)
+  if (typeof window !== 'undefined' && window.location && window.location.origin) {
+    const origin = window.location.origin
+    if (copyUrlBtn) {
+      copyUrlBtn.dataset.copyUrl = origin
+    }
+    if (urlTextEl) {
+      urlTextEl.textContent = origin
+    }
+    // Update resource table links to match current deployment origin
+    document.querySelectorAll('.resources-table-wrap tbody td:first-child a').forEach((link) => {
+      const pathname = link.pathname
+      link.href = `${origin}${pathname}`
+    })
+  }
 
   let copyResetTimer = null
 

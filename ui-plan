@@ -1,0 +1,38 @@
+## TypiStack UI Update — Minimal Changes Only
+
+Use the existing project and current UI as the starting point. Do not follow the full premium redesign plan literally.
+
+### Requirements
+
+1. **Keep the Existing UI**
+   - Preserve the current layout, structure, colors, typography, spacing, and overall visual style as much as possible.
+   - Do not rebuild the website from scratch.
+   - Do not introduce glassmorphism, glowing effects, complex animations, excessive gradients, or unnecessary premium components.
+
+2. **Make Small Originality Changes**
+   - Replace JSONPlaceholder and Typicode branding with our own brand, TypiStack.
+   - Rewrite headings, descriptions, labels, documentation, and other text in original wording.
+   - Make only minor adjustments to card styling, spacing, borders, button shapes, and selected layout elements.
+   - Replace third-party logos and copied assets with original branding where needed.
+
+3. **Preserve Existing Functionality**
+   - Keep all current API endpoints, response structures, data, and backend functionality working.
+   - Preserve existing interactions and responsive behavior.
+   - Do not remove working features or unnecessarily rewrite the code.
+
+4. **Implement Only Essential Features**
+   - Add or update the base URL copy button if needed.
+   - Make small improvements to the existing API playground only where necessary.
+   - Do not add a complete new playground, sponsor dashboard, payment system, or monetization engine unless explicitly requested.
+
+5. **Limit Code Changes**
+   - Focus on `index.html`, `style.css`, and `main.js` only where necessary.
+   - Inspect the existing implementation before making changes.
+   - Keep the current code structure and existing comments wherever possible.
+   - Do not modify unrelated files or introduce unnecessary dependencies.
+
+### Final Goal
+
+The website should still look and feel like the existing website, not a completely new premium product. Make a few carefully selected changes to the text, branding, styling, and minor layout details so the result feels original while preserving the existing design and functionality.
+
+**Important:** Make the smallest set of changes needed. Do not overdesign, overengineer, or add features just because they appear in the larger redesign plan. After implementation, verify that all existing endpoints and UI interactions still work.

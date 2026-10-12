@@ -1,6 +1,6 @@
 /* ===================================================================
-   JSONPlaceholder Clone — style.css
-   Design system + all component styles
+   TypiStack — style.css
+   Minimal original styling enhancements
    =================================================================== */
 
 /* ─── Google Fonts ──────────────────────────────────────────────── */
@@ -128,7 +128,16 @@ img {
   font-weight: 600;
   color: var(--color-ink);
   letter-spacing: -0.01em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   transition: color var(--transition);
+}
+
+.brand-logo-mark {
+  color: var(--color-clay);
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
 .site-brand:hover {

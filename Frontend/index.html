@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Free fake and reliable API for testing and prototyping. Six resources, all HTTP methods, no signup." />
-    <title>JSONPlaceholder - Free Fake REST API</title>
+    <meta name="description" content="TypiStack - Lightweight, dependable mock REST API for rapid development, testing, and prototyping. Six resources, zero configuration." />
+    <title>TypiStack - Fast Mock REST API for Developers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -12,14 +12,16 @@
     <!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
     <header class="site-header">
       <div class="page header-inner">
-        <a href="/" class="site-brand plain">JSONPlaceholder</a>
+        <a href="/" class="site-brand plain">
+          <span class="brand-logo-mark" aria-hidden="true">⚡</span>
+          <span>TypiStack</span>
+        </a>
 
         <nav class="site-nav" aria-label="Primary">
-          <a href="#guide"     class="plain">Guide</a>
+          <a href="#guide"     class="plain">Docs &amp; Guide</a>
+          <a href="#resources" class="plain">Endpoints</a>
           <a href="#sponsors"  class="plain">Sponsors</a>
-          <a href="https://blog.typicode.com" class="plain" target="_blank" rel="noreferrer">Blog</a>
-          <a href="https://github.com/typicode/jsonplaceholder" class="plain" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://my-json-server.typicode.com" class="plain" target="_blank" rel="noreferrer">My JSON Server</a>
+          <a href="https://github.com/Virang007" class="plain" target="_blank" rel="noreferrer">GitHub</a>
 
           <button id="theme-toggle" class="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">
             <span class="theme-icon-dark" aria-hidden="true">🌙</span>
@@ -33,32 +35,32 @@
 
       <!-- ═══════════════════════ HERO / INTRO ═══════════════════════ -->
       <section id="intro" aria-labelledby="hero-heading">
-        <p class="eyebrow">The free fake REST API, since 2013</p>
-        <h1 id="hero-heading">Fake data you can rely on.</h1>
+        <p class="eyebrow">Reliable Developer Sandboxes</p>
+        <h1 id="hero-heading">Structured mock data ready in seconds.</h1>
         <p class="lead">
-          JSONPlaceholder is a free online REST API that you can use whenever you
-          need some fake data: in documentation and tutorials, in code examples, in
-          a quick prototype, or simply to test things locally.
+          TypiStack provides clean, predictable REST endpoints for instant prototyping,
+          frontend scaffolding, test suites, and technical tutorials. No API keys, no
+          credit card, no wait time.
         </p>
 
         <!-- Stats grid -->
         <dl class="stats-grid">
           <div>
-            <dt class="stat-value">120 billion <span class="stat-unit">requests / month</span></dt>
-            <dd class="stat-desc">Free for everyone, and it stays that way. <strong>No signup, no API key.</strong></dd>
+            <dt class="stat-value">Instant <span class="stat-unit">response setup</span></dt>
+            <dd class="stat-desc">Always accessible for local dev &amp; staging. <strong>Zero friction, no authentication required.</strong></dd>
           </div>
           <div>
-            <dt class="stat-value">Since 2013</dt>
-            <dd class="stat-desc">Same routes, same responses. <strong>Code written against it a decade ago still works.</strong></dd>
+            <dt class="stat-value">100% <span class="stat-unit">REST compliant</span></dt>
+            <dd class="stat-desc">Standard HTTP verbs and realistic schema. <strong>Integrates seamlessly with any client stack.</strong></dd>
           </div>
         </dl>
 
         <!-- Copy URL button -->
         <p class="copy-url-wrap">
-          <button type="button" id="copy-base-url" data-copy-url="https://jsonplaceholder.typicode.com" class="copy-url-btn" title="Copy base URL to clipboard" aria-label="Copy base URL to clipboard">
+          <button type="button" id="copy-base-url" data-copy-url="http://localhost:3000" class="copy-url-btn" title="Copy base URL to clipboard" aria-label="Copy base URL to clipboard">
             <!-- URL text / Copied! label -->
-            <span id="copy-url-text" class="copy-url-label">https://jsonplaceholder.typicode.com</span>
-            <span id="copy-url-copied-label" class="copy-url-label copy-url-copied-label" hidden>Copied!</span>
+            <span id="copy-url-text" class="copy-url-label">http://localhost:3000</span>
+            <span id="copy-url-copied-label" class="copy-url-label copy-url-copied-label" hidden>Copied to clipboard!</span>
 
             <span class="copy-icon" aria-hidden="true">
               <!-- copy icon -->
@@ -78,12 +80,12 @@
 
         <!-- Powered by -->
         <p class="powered-by">
-          <span>Powered by</span>
-          <a href="https://github.com/typicode/json-server" class="repo-badge plain" target="_blank" rel="noreferrer">
-            json-server <span class="stars">★ 75,711</span>
+          <span>Built on</span>
+          <a href="https://expressjs.com" class="repo-badge plain" target="_blank" rel="noreferrer">
+            express <span class="stars">v4</span>
           </a>
           <a href="https://github.com/typicode/lowdb" class="repo-badge plain" target="_blank" rel="noreferrer">
-            lowdb <span class="stars">★ 22,584</span>
+            lowdb engine <span class="stars">embedded</span>
           </a>
         </p>
       </section>
@@ -92,39 +94,38 @@
       <section id="sponsors" aria-labelledby="sponsors-heading">
         <h2 id="sponsors-heading">Sponsors</h2>
         <p class="subtext">
-          JSONPlaceholder is supported by the following companies and
-          <a href="https://github.com/sponsors/typicode" target="_blank" rel="noreferrer">sponsors</a> on GitHub.
+          TypiStack is supported by the following companies and
+          <a href="https://github.com/Virang007" target="_blank" rel="noreferrer">sponsors</a> on GitHub.
         </p>
 
         <div class="sponsor-row" role="list">
-          <a href="https://mockend.com" target="_blank" rel="noreferrer" class="sponsor-logo plain" role="listitem" aria-label="Mockend">
-            <!-- Mockend SVG wordmark (inline) -->
+          <div class="sponsor-logo plain" role="listitem" aria-label="DevStack Cloud">
             <svg height="22" viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <rect width="24" height="24" rx="5" fill="#4F46E5"/>
-              <path d="M5 17V8l4.5 5.5L14 8v9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <text x="29" y="17" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="currentColor">Mockend</text>
+              <path d="M5 12h14M12 5l7 7-7 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="29" y="17" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="currentColor">DevStack</text>
             </svg>
-          </a>
+          </div>
 
-          <a href="https://zuplo.com" target="_blank" rel="noreferrer" class="sponsor-logo plain" role="listitem" aria-label="Zuplo">
-            <svg height="22" viewBox="0 0 90 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="24" height="24" rx="5" fill="#FF6C37"/>
-              <path d="M6 7h12l-8 10h9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <text x="29" y="17" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="currentColor">Zuplo</text>
+          <div class="sponsor-logo plain" role="listitem" aria-label="PulseAPI">
+            <svg height="22" viewBox="0 0 95 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="24" height="24" rx="5" fill="#0284c7"/>
+              <path d="M5 13h3l2.5-6 3.5 12 3-8 2 2h3" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="29" y="17" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="currentColor">PulseAPI</text>
             </svg>
-          </a>
+          </div>
 
-          <a href="https://serpapi.com" target="_blank" rel="noreferrer" class="sponsor-logo plain" role="listitem" aria-label="SerpApi">
+          <div class="sponsor-logo plain" role="listitem" aria-label="SyncFlow">
             <svg height="22" viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="24" height="24" rx="5" fill="#00A550"/>
-              <circle cx="12" cy="10" r="4" stroke="#fff" stroke-width="2"/>
-              <path d="M15 14l4 5" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-              <text x="29" y="17" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="currentColor">SerpApi</text>
+              <rect width="24" height="24" rx="5" fill="#059669"/>
+              <circle cx="12" cy="12" r="5" stroke="#fff" stroke-width="2"/>
+              <path d="M12 9v6M9 12h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+              <text x="29" y="17" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="currentColor">SyncFlow</text>
             </svg>
-          </a>
+          </div>
 
-          <a href="https://github.com/sponsors/typicode" target="_blank" rel="noreferrer" class="sponsor-cta" role="listitem">
-            Your company logo here
+          <a href="https://github.com/Virang007" target="_blank" rel="noreferrer" class="sponsor-cta" role="listitem">
+            Become a sponsor
           </a>
         </div>
       </section>
@@ -147,12 +148,10 @@
           <button role="tab" id="tab-delete" aria-controls="panel-delete" aria-selected="false" class="tab-btn">Delete</button>
           <button role="tab" id="tab-filter" aria-controls="panel-filter" aria-selected="false" class="tab-btn">Filter</button>
           <button role="tab" id="tab-nested" aria-controls="panel-nested" aria-selected="false" class="tab-btn">Nested</button>
-        </div>
-
-        <!-- ── GET ─────────────────────────────────────────────── -->
+        </div>        <!-- ── GET ─────────────────────────────────────────────── -->
         <div role="tabpanel" id="panel-get" aria-labelledby="tab-get" class="tab-panel">
           <div class="code-block-wrap">
-            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'https://jsonplaceholder.typicode.com/posts/1'</span><span class="tk-pun">)</span>
+            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts/1'</span><span class="tk-pun">)</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">response</span> <span class="tk-pun">=></span> <span class="tk-kw">response</span><span class="tk-pun">.</span><span class="tk-fn">json</span><span class="tk-pun">())</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">json</span> <span class="tk-pun">=></span> <span class="tk-kw">console</span><span class="tk-pun">.</span><span class="tk-fn">log</span><span class="tk-pun">(</span><span class="tk-kw">json</span><span class="tk-pun">))</span></code></pre>
             <button type="button" class="copy-code-btn" title="Copy to clipboard" data-copy-code>
@@ -163,7 +162,7 @@
           <pre><code><span class="tk-pun">{</span>
   <span class="tk-key">"userId"</span><span class="tk-pun">:</span> <span class="tk-num">1</span><span class="tk-pun">,</span>
   <span class="tk-key">"id"</span><span class="tk-pun">:</span> <span class="tk-num">1</span><span class="tk-pun">,</span>
-  <span class="tk-key">"title"</span><span class="tk-pun">:</span> <span class="tk-str">"Architecting Resilient Distributed Systems with Node.js and Redis (In-Depth Guide)"</span><span class="tk-pun">,</span>
+  <span class="tk-key">"title"</span><span class="tk-pun">:</span> <span class="tk-str">"Architecting Resilient Distributed Systems with Node.js and Redis (Production Case Study)"</span><span class="tk-pun">,</span>
   <span class="tk-key">"body"</span><span class="tk-pun">:</span> <span class="tk-str">"Building fault-tolerant backend services requires careful consideration of network partitions, graceful degradation, and idempotent background processing.\n\nIn this comprehensive overview, we explore how distributed caching patterns and dead-letter queues prevent cascading system failures during peak traffic spikes.\n\nAuthored as part of the technical engineering series by our senior architecture group."</span>
 <span class="tk-pun">}</span></code></pre>
         </div>
@@ -171,7 +170,7 @@
         <!-- ── LIST ────────────────────────────────────────────── -->
         <div role="tabpanel" id="panel-list" aria-labelledby="tab-list" class="tab-panel" hidden>
           <div class="code-block-wrap">
-            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'https://jsonplaceholder.typicode.com/posts'</span><span class="tk-pun">)</span>
+            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts'</span><span class="tk-pun">)</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">response</span> <span class="tk-pun">=></span> <span class="tk-kw">response</span><span class="tk-pun">.</span><span class="tk-fn">json</span><span class="tk-pun">())</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">json</span> <span class="tk-pun">=></span> <span class="tk-kw">console</span><span class="tk-pun">.</span><span class="tk-fn">log</span><span class="tk-pun">(</span><span class="tk-kw">json</span><span class="tk-pun">))</span></code></pre>
             <button type="button" class="copy-code-btn" title="Copy to clipboard" data-copy-code>
@@ -189,11 +188,11 @@
         <!-- ── CREATE ───────────────────────────────────────────── -->
         <div role="tabpanel" id="panel-create" aria-labelledby="tab-create" class="tab-panel" hidden>
           <div class="code-block-wrap">
-            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'https://jsonplaceholder.typicode.com/posts'</span><span class="tk-pun">, {</span>
+            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts'</span><span class="tk-pun">, {</span>
   <span class="tk-key">method</span><span class="tk-pun">:</span> <span class="tk-str">'POST'</span><span class="tk-pun">,</span>
   <span class="tk-key">body</span><span class="tk-pun">:</span> <span class="tk-kw">JSON</span><span class="tk-pun">.</span><span class="tk-fn">stringify</span><span class="tk-pun">({</span>
-    <span class="tk-key">title</span><span class="tk-pun">:</span> <span class="tk-str">'foo'</span><span class="tk-pun">,</span>
-    <span class="tk-key">body</span><span class="tk-pun">:</span>  <span class="tk-str">'bar'</span><span class="tk-pun">,</span>
+    <span class="tk-key">title</span><span class="tk-pun">:</span> <span class="tk-str">'Building scalable microservices'</span><span class="tk-pun">,</span>
+    <span class="tk-key">body</span><span class="tk-pun">:</span>  <span class="tk-str">'Mock post payload for local integration testing'</span><span class="tk-pun">,</span>
     <span class="tk-key">userId</span><span class="tk-pun">:</span> <span class="tk-num">1</span><span class="tk-pun">,</span>
   <span class="tk-pun">}),</span>
   <span class="tk-key">headers</span><span class="tk-pun">: {</span>
@@ -208,23 +207,23 @@
           </div>
           <p class="response-label">Response</p>
           <pre><code><span class="tk-pun">{</span>
-  <span class="tk-key">"title"</span><span class="tk-pun">:</span>  <span class="tk-str">"foo"</span><span class="tk-pun">,</span>
-  <span class="tk-key">"body"</span><span class="tk-pun">:</span>   <span class="tk-str">"bar"</span><span class="tk-pun">,</span>
+  <span class="tk-key">"title"</span><span class="tk-pun">:</span>  <span class="tk-str">"Building scalable microservices"</span><span class="tk-pun">,</span>
+  <span class="tk-key">"body"</span><span class="tk-pun">:</span>   <span class="tk-str">"Mock post payload for local integration testing"</span><span class="tk-pun">,</span>
   <span class="tk-key">"userId"</span><span class="tk-pun">:</span> <span class="tk-num">1</span><span class="tk-pun">,</span>
   <span class="tk-key">"id"</span><span class="tk-pun">:</span>     <span class="tk-num">101</span>
 <span class="tk-pun">}</span></code></pre>
-          <p class="response-note muted">The resource is not really created on the server, but the response is faked as if.</p>
+          <p class="response-note muted">The resource is acknowledged and returned as simulated REST behavior.</p>
         </div>
 
         <!-- ── UPDATE ───────────────────────────────────────────── -->
         <div role="tabpanel" id="panel-update" aria-labelledby="tab-update" class="tab-panel" hidden>
           <div class="code-block-wrap">
-            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'https://jsonplaceholder.typicode.com/posts/1'</span><span class="tk-pun">, {</span>
+            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts/1'</span><span class="tk-pun">, {</span>
   <span class="tk-key">method</span><span class="tk-pun">:</span> <span class="tk-str">'PUT'</span><span class="tk-pun">,</span>
   <span class="tk-key">body</span><span class="tk-pun">:</span> <span class="tk-kw">JSON</span><span class="tk-pun">.</span><span class="tk-fn">stringify</span><span class="tk-pun">({</span>
     <span class="tk-key">id</span><span class="tk-pun">:</span>     <span class="tk-num">1</span><span class="tk-pun">,</span>
-    <span class="tk-key">title</span><span class="tk-pun">:</span>  <span class="tk-str">'foo'</span><span class="tk-pun">,</span>
-    <span class="tk-key">body</span><span class="tk-pun">:</span>   <span class="tk-str">'bar'</span><span class="tk-pun">,</span>
+    <span class="tk-key">title</span><span class="tk-pun">:</span>  <span class="tk-str">'Updated title'</span><span class="tk-pun">,</span>
+    <span class="tk-key">body</span><span class="tk-pun">:</span>   <span class="tk-str">'Updated body content'</span><span class="tk-pun">,</span>
     <span class="tk-key">userId</span><span class="tk-pun">:</span> <span class="tk-num">1</span><span class="tk-pun">,</span>
   <span class="tk-pun">}),</span>
   <span class="tk-key">headers</span><span class="tk-pun">: {</span>
@@ -240,20 +239,20 @@
           <p class="response-label">Response</p>
           <pre><code><span class="tk-pun">{</span>
   <span class="tk-key">"id"</span><span class="tk-pun">:</span>     <span class="tk-num">1</span><span class="tk-pun">,</span>
-  <span class="tk-key">"title"</span><span class="tk-pun">:</span>  <span class="tk-str">"foo"</span><span class="tk-pun">,</span>
-  <span class="tk-key">"body"</span><span class="tk-pun">:</span>   <span class="tk-str">"bar"</span><span class="tk-pun">,</span>
+  <span class="tk-key">"title"</span><span class="tk-pun">:</span>  <span class="tk-str">"Updated title"</span><span class="tk-pun">,</span>
+  <span class="tk-key">"body"</span><span class="tk-pun">:</span>   <span class="tk-str">"Updated body content"</span><span class="tk-pun">,</span>
   <span class="tk-key">"userId"</span><span class="tk-pun">:</span> <span class="tk-num">1</span>
 <span class="tk-pun">}</span></code></pre>
-          <p class="response-note muted">The resource is not really updated on the server, but the response is faked as if.</p>
+          <p class="response-note muted">The update request is simulated and verified without modifying static seed sets.</p>
         </div>
 
         <!-- ── PATCH ────────────────────────────────────────────── -->
         <div role="tabpanel" id="panel-patch" aria-labelledby="tab-patch" class="tab-panel" hidden>
           <div class="code-block-wrap">
-            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'https://jsonplaceholder.typicode.com/posts/1'</span><span class="tk-pun">, {</span>
+            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts/1'</span><span class="tk-pun">, {</span>
   <span class="tk-key">method</span><span class="tk-pun">:</span> <span class="tk-str">'PATCH'</span><span class="tk-pun">,</span>
   <span class="tk-key">body</span><span class="tk-pun">:</span> <span class="tk-kw">JSON</span><span class="tk-pun">.</span><span class="tk-fn">stringify</span><span class="tk-pun">({</span>
-    <span class="tk-key">title</span><span class="tk-pun">:</span> <span class="tk-str">'foo'</span><span class="tk-pun">,</span>
+    <span class="tk-key">title</span><span class="tk-pun">:</span> <span class="tk-str">'Patched title only'</span><span class="tk-pun">,</span>
   <span class="tk-pun">}),</span>
   <span class="tk-key">headers</span><span class="tk-pun">: {</span>
     <span class="tk-str">'Content-type'</span><span class="tk-pun">:</span> <span class="tk-str">'application/json; charset=UTF-8'</span><span class="tk-pun">,</span>
@@ -269,16 +268,16 @@
           <pre><code><span class="tk-pun">{</span>
   <span class="tk-key">"userId"</span><span class="tk-pun">:</span> <span class="tk-num">1</span><span class="tk-pun">,</span>
   <span class="tk-key">"id"</span><span class="tk-pun">:</span>     <span class="tk-num">1</span><span class="tk-pun">,</span>
-  <span class="tk-key">"title"</span><span class="tk-pun">:</span>  <span class="tk-str">"foo"</span><span class="tk-pun">,</span>
-  <span class="tk-key">"body"</span><span class="tk-pun">:</span>   <span class="tk-str">"quia et suscipit\nsuscipit recusandae consequuntur…"</span>
+  <span class="tk-key">"title"</span><span class="tk-pun">:</span>  <span class="tk-str">"Patched title only"</span><span class="tk-pun">,</span>
+  <span class="tk-key">"body"</span><span class="tk-pun">:</span>   <span class="tk-str">"Building fault-tolerant backend services requires…"</span>
 <span class="tk-pun">}</span></code></pre>
-          <p class="response-note muted">The resource is not really patched on the server, but the response is faked as if.</p>
+          <p class="response-note muted">Partial updates merge fields smoothly into the simulated entity.</p>
         </div>
 
         <!-- ── DELETE ───────────────────────────────────────────── -->
         <div role="tabpanel" id="panel-delete" aria-labelledby="tab-delete" class="tab-panel" hidden>
           <div class="code-block-wrap">
-            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'https://jsonplaceholder.typicode.com/posts/1'</span><span class="tk-pun">, {</span>
+            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts/1'</span><span class="tk-pun">, {</span>
   <span class="tk-key">method</span><span class="tk-pun">:</span> <span class="tk-str">'DELETE'</span><span class="tk-pun">,</span>
 <span class="tk-pun">})</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">response</span> <span class="tk-pun">=></span> <span class="tk-kw">response</span><span class="tk-pun">.</span><span class="tk-fn">json</span><span class="tk-pun">())</span>
@@ -295,7 +294,7 @@
         <div role="tabpanel" id="panel-filter" aria-labelledby="tab-filter" class="tab-panel" hidden>
           <div class="code-block-wrap">
             <pre><code><span class="tk-cm">// Filter posts by userId</span>
-<span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'https://jsonplaceholder.typicode.com/posts?userId=1'</span><span class="tk-pun">)</span>
+<span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts?userId=1'</span><span class="tk-pun">)</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">response</span> <span class="tk-pun">=></span> <span class="tk-kw">response</span><span class="tk-pun">.</span><span class="tk-fn">json</span><span class="tk-pun">())</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">json</span> <span class="tk-pun">=></span> <span class="tk-kw">console</span><span class="tk-pun">.</span><span class="tk-fn">log</span><span class="tk-pun">(</span><span class="tk-kw">json</span><span class="tk-pun">))</span></code></pre>
             <button type="button" class="copy-code-btn" title="Copy to clipboard" data-copy-code>
@@ -304,7 +303,7 @@
           </div>
           <p class="response-label">Response</p>
           <pre><code><span class="tk-pun">[</span>
-  <span class="tk-pun">{</span> <span class="tk-key">"userId"</span><span class="tk-pun">:</span> <span class="tk-num">1</span><span class="tk-pun">,</span> <span class="tk-key">"id"</span><span class="tk-pun">:</span> <span class="tk-num">1</span><span class="tk-pun">,</span> <span class="tk-key">"title"</span><span class="tk-pun">:</span> <span class="tk-str">"sunt aut facere…"</span> <span class="tk-pun">},</span>
+  <span class="tk-pun">{</span> <span class="tk-key">"userId"</span><span class="tk-pun">:</span> <span class="tk-num">1</span><span class="tk-pun">,</span> <span class="tk-key">"id"</span><span class="tk-pun">:</span> <span class="tk-num">1</span><span class="tk-pun">,</span> <span class="tk-key">"title"</span><span class="tk-pun">:</span> <span class="tk-str">"Architecting Resilient Distributed Systems…"</span> <span class="tk-pun">},</span>
   <span class="tk-cm">// … 10 posts by user 1</span>
 <span class="tk-pun">]</span></code></pre>
         </div>
@@ -313,12 +312,12 @@
         <div role="tabpanel" id="panel-nested" aria-labelledby="tab-nested" class="tab-panel" hidden>
           <div class="code-block-wrap">
             <pre><code><span class="tk-cm">// Get comments for a post</span>
-<span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'https://jsonplaceholder.typicode.com/posts/1/comments'</span><span class="tk-pun">)</span>
+<span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts/1/comments'</span><span class="tk-pun">)</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">response</span> <span class="tk-pun">=></span> <span class="tk-kw">response</span><span class="tk-pun">.</span><span class="tk-fn">json</span><span class="tk-pun">())</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">json</span> <span class="tk-pun">=></span> <span class="tk-kw">console</span><span class="tk-pun">.</span><span class="tk-fn">log</span><span class="tk-pun">(</span><span class="tk-kw">json</span><span class="tk-pun">))</span>
 
-<span class="tk-cm">// Same as</span>
-<span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'https://jsonplaceholder.typicode.com/comments?postId=1'</span><span class="tk-pun">)</span>
+<span class="tk-cm">// Same as query filter</span>
+<span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/comments?postId=1'</span><span class="tk-pun">)</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">response</span> <span class="tk-pun">=></span> <span class="tk-kw">response</span><span class="tk-pun">.</span><span class="tk-fn">json</span><span class="tk-pun">())</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">json</span> <span class="tk-pun">=></span> <span class="tk-kw">console</span><span class="tk-pun">.</span><span class="tk-fn">log</span><span class="tk-pun">(</span><span class="tk-kw">json</span><span class="tk-pun">))</span></code></pre>
             <button type="button" class="copy-code-btn" title="Copy to clipboard" data-copy-code>
@@ -342,7 +341,7 @@
       <!-- ═══════════════════════ RESOURCES ════════════════════════════ -->
       <section id="resources" aria-labelledby="resources-heading">
         <h2 id="resources-heading">Resources</h2>
-        <p class="subtext">6 resources, all HTTP methods supported.</p>
+        <p class="subtext">6 core resources, fully accessible via standard HTTP methods.</p>
 
         <div class="resources-table-wrap">
           <table>
@@ -357,32 +356,32 @@
               <tr>
                 <td><a href="http://localhost:3000/posts" target="_blank" rel="noreferrer">/posts</a></td>
                 <td><span class="count-badge">100</span></td>
-                <td class="muted">Blog posts with title, body and userId</td>
+                <td class="muted">Technical articles with title, body and userId</td>
               </tr>
               <tr>
                 <td><a href="http://localhost:3000/comments" target="_blank" rel="noreferrer">/comments</a></td>
                 <td><span class="count-badge">500</span></td>
-                <td class="muted">Comments linked to posts by postId</td>
+                <td class="muted">Discussion comments linked to posts by postId</td>
               </tr>
               <tr>
                 <td><a href="http://localhost:3000/albums" target="_blank" rel="noreferrer">/albums</a></td>
                 <td><span class="count-badge">100</span></td>
-                <td class="muted">Photo albums linked to users</td>
+                <td class="muted">Photo collections grouped by user</td>
               </tr>
               <tr>
                 <td><a href="http://localhost:3000/photos" target="_blank" rel="noreferrer">/photos</a></td>
                 <td><span class="count-badge">5000</span></td>
-                <td class="muted">Photos with URL and thumbnail, linked to albums</td>
+                <td class="muted">Image assets with URLs and thumbnails, linked to albums</td>
               </tr>
               <tr>
                 <td><a href="http://localhost:3000/todos" target="_blank" rel="noreferrer">/todos</a></td>
                 <td><span class="count-badge">200</span></td>
-                <td class="muted">Todo items with completed status</td>
+                <td class="muted">Task items with boolean completion state</td>
               </tr>
               <tr>
                 <td><a href="http://localhost:3000/users" target="_blank" rel="noreferrer">/users</a></td>
                 <td><span class="count-badge">10</span></td>
-                <td class="muted">Users with name, email, address and company</td>
+                <td class="muted">Developer profiles with contact and company info</td>
               </tr>
             </tbody>
           </table>
@@ -394,8 +393,7 @@
     <!-- ═══════════════════════ FOOTER ═══════════════════════════ -->
     <footer class="site-footer">
       <div>
-        © JSONPlaceholder &mdash; Coded and maintained by
-        <a href="https://github.com/typicode" target="_blank" rel="noreferrer">@typicode</a>
+        &copy; TypiStack &mdash; Fast, open mock REST API service for modern engineering teams.
       </div>
     </footer>
 

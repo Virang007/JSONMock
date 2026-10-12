@@ -1,0 +1,15 @@
+{
+  "name": "typistack",
+  "version": "1.0.0",
+  "description": "TypiStack - Fast mock REST API for testing and prototyping",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node Backend/server.js",
+    "dev": "node Backend/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "lowdb": "^1.0.0"
+  }
+}
