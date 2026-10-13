@@ -151,7 +151,7 @@
         </div>        <!-- ── GET ─────────────────────────────────────────────── -->
         <div role="tabpanel" id="panel-get" aria-labelledby="tab-get" class="tab-panel">
           <div class="code-block-wrap">
-            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts/1'</span><span class="tk-pun">)</span>
+            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://json-mock-pink.vercel.app/posts/1'</span><span class="tk-pun">)</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">response</span> <span class="tk-pun">=></span> <span class="tk-kw">response</span><span class="tk-pun">.</span><span class="tk-fn">json</span><span class="tk-pun">())</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">json</span> <span class="tk-pun">=></span> <span class="tk-kw">console</span><span class="tk-pun">.</span><span class="tk-fn">log</span><span class="tk-pun">(</span><span class="tk-kw">json</span><span class="tk-pun">))</span></code></pre>
             <button type="button" class="copy-code-btn" title="Copy to clipboard" data-copy-code>
@@ -170,7 +170,7 @@
         <!-- ── LIST ────────────────────────────────────────────── -->
         <div role="tabpanel" id="panel-list" aria-labelledby="tab-list" class="tab-panel" hidden>
           <div class="code-block-wrap">
-            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts'</span><span class="tk-pun">)</span>
+            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://json-mock-pink.vercel.app/posts'</span><span class="tk-pun">)</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">response</span> <span class="tk-pun">=></span> <span class="tk-kw">response</span><span class="tk-pun">.</span><span class="tk-fn">json</span><span class="tk-pun">())</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">json</span> <span class="tk-pun">=></span> <span class="tk-kw">console</span><span class="tk-pun">.</span><span class="tk-fn">log</span><span class="tk-pun">(</span><span class="tk-kw">json</span><span class="tk-pun">))</span></code></pre>
             <button type="button" class="copy-code-btn" title="Copy to clipboard" data-copy-code>
@@ -188,7 +188,7 @@
         <!-- ── CREATE ───────────────────────────────────────────── -->
         <div role="tabpanel" id="panel-create" aria-labelledby="tab-create" class="tab-panel" hidden>
           <div class="code-block-wrap">
-            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts'</span><span class="tk-pun">, {</span>
+            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://json-mock-pink.vercel.app/posts'</span><span class="tk-pun">, {</span>
   <span class="tk-key">method</span><span class="tk-pun">:</span> <span class="tk-str">'POST'</span><span class="tk-pun">,</span>
   <span class="tk-key">body</span><span class="tk-pun">:</span> <span class="tk-kw">JSON</span><span class="tk-pun">.</span><span class="tk-fn">stringify</span><span class="tk-pun">({</span>
     <span class="tk-key">title</span><span class="tk-pun">:</span> <span class="tk-str">'Building scalable microservices'</span><span class="tk-pun">,</span>
@@ -218,7 +218,7 @@
         <!-- ── UPDATE ───────────────────────────────────────────── -->
         <div role="tabpanel" id="panel-update" aria-labelledby="tab-update" class="tab-panel" hidden>
           <div class="code-block-wrap">
-            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts/1'</span><span class="tk-pun">, {</span>
+            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://json-mock-pink.vercel.app/posts/1'</span><span class="tk-pun">, {</span>
   <span class="tk-key">method</span><span class="tk-pun">:</span> <span class="tk-str">'PUT'</span><span class="tk-pun">,</span>
   <span class="tk-key">body</span><span class="tk-pun">:</span> <span class="tk-kw">JSON</span><span class="tk-pun">.</span><span class="tk-fn">stringify</span><span class="tk-pun">({</span>
     <span class="tk-key">id</span><span class="tk-pun">:</span>     <span class="tk-num">1</span><span class="tk-pun">,</span>
@@ -249,7 +249,7 @@
         <!-- ── PATCH ────────────────────────────────────────────── -->
         <div role="tabpanel" id="panel-patch" aria-labelledby="tab-patch" class="tab-panel" hidden>
           <div class="code-block-wrap">
-            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts/1'</span><span class="tk-pun">, {</span>
+            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://json-mock-pink.vercel.app/posts/1'</span><span class="tk-pun">, {</span>
   <span class="tk-key">method</span><span class="tk-pun">:</span> <span class="tk-str">'PATCH'</span><span class="tk-pun">,</span>
   <span class="tk-key">body</span><span class="tk-pun">:</span> <span class="tk-kw">JSON</span><span class="tk-pun">.</span><span class="tk-fn">stringify</span><span class="tk-pun">({</span>
     <span class="tk-key">title</span><span class="tk-pun">:</span> <span class="tk-str">'Patched title only'</span><span class="tk-pun">,</span>
@@ -277,7 +277,7 @@
         <!-- ── DELETE ───────────────────────────────────────────── -->
         <div role="tabpanel" id="panel-delete" aria-labelledby="tab-delete" class="tab-panel" hidden>
           <div class="code-block-wrap">
-            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts/1'</span><span class="tk-pun">, {</span>
+            <pre><code><span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://json-mock-pink.vercel.app/posts/1'</span><span class="tk-pun">, {</span>
   <span class="tk-key">method</span><span class="tk-pun">:</span> <span class="tk-str">'DELETE'</span><span class="tk-pun">,</span>
 <span class="tk-pun">})</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">response</span> <span class="tk-pun">=></span> <span class="tk-kw">response</span><span class="tk-pun">.</span><span class="tk-fn">json</span><span class="tk-pun">())</span>
@@ -294,7 +294,7 @@
         <div role="tabpanel" id="panel-filter" aria-labelledby="tab-filter" class="tab-panel" hidden>
           <div class="code-block-wrap">
             <pre><code><span class="tk-cm">// Filter posts by userId</span>
-<span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts?userId=1'</span><span class="tk-pun">)</span>
+<span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://json-mock-pink.vercel.app/posts?userId=1'</span><span class="tk-pun">)</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">response</span> <span class="tk-pun">=></span> <span class="tk-kw">response</span><span class="tk-pun">.</span><span class="tk-fn">json</span><span class="tk-pun">())</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">json</span> <span class="tk-pun">=></span> <span class="tk-kw">console</span><span class="tk-pun">.</span><span class="tk-fn">log</span><span class="tk-pun">(</span><span class="tk-kw">json</span><span class="tk-pun">))</span></code></pre>
             <button type="button" class="copy-code-btn" title="Copy to clipboard" data-copy-code>
@@ -312,12 +312,12 @@
         <div role="tabpanel" id="panel-nested" aria-labelledby="tab-nested" class="tab-panel" hidden>
           <div class="code-block-wrap">
             <pre><code><span class="tk-cm">// Get comments for a post</span>
-<span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/posts/1/comments'</span><span class="tk-pun">)</span>
+<span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://json-mock-pink.vercel.app/posts/1/comments'</span><span class="tk-pun">)</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">response</span> <span class="tk-pun">=></span> <span class="tk-kw">response</span><span class="tk-pun">.</span><span class="tk-fn">json</span><span class="tk-pun">())</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">json</span> <span class="tk-pun">=></span> <span class="tk-kw">console</span><span class="tk-pun">.</span><span class="tk-fn">log</span><span class="tk-pun">(</span><span class="tk-kw">json</span><span class="tk-pun">))</span>
 
 <span class="tk-cm">// Same as query filter</span>
-<span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://localhost:3000/comments?postId=1'</span><span class="tk-pun">)</span>
+<span class="tk-fn">fetch</span><span class="tk-pun">(</span><span class="tk-str">'http://json-mock-pink.vercel.app/comments?postId=1'</span><span class="tk-pun">)</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">response</span> <span class="tk-pun">=></span> <span class="tk-kw">response</span><span class="tk-pun">.</span><span class="tk-fn">json</span><span class="tk-pun">())</span>
   <span class="tk-pun">.</span><span class="tk-fn">then</span><span class="tk-pun">(</span><span class="tk-kw">json</span> <span class="tk-pun">=></span> <span class="tk-kw">console</span><span class="tk-pun">.</span><span class="tk-fn">log</span><span class="tk-pun">(</span><span class="tk-kw">json</span><span class="tk-pun">))</span></code></pre>
             <button type="button" class="copy-code-btn" title="Copy to clipboard" data-copy-code>
