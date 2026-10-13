@@ -629,6 +629,275 @@ tbody td:first-child a:hover {
   transition: background var(--transition), border-color var(--transition);
 }
 
+/* ─── Sponsors Section ─────────────────────────────────────────── */
+.sponsors-section {
+  padding-top: 3.5rem;
+}
+
+.sponsor-card {
+  margin-top: 1.5rem;
+  padding: 1.75rem;
+  background-color: var(--color-bg-deep);
+  border: 1px solid var(--color-rule);
+  border-radius: 12px;
+  transition: border-color var(--transition), background-color var(--transition);
+}
+
+.sponsor-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.sponsor-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.sponsor-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--color-rule);
+  display: block;
+  object-fit: cover;
+}
+
+.sponsor-badge-emoji {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  font-size: 0.9rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-rule);
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-profile-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.sponsor-name-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.sponsor-author-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+}
+
+.sponsor-handle {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.sponsor-handle:hover {
+  color: var(--color-clay);
+}
+
+.sponsor-bio {
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  line-height: 1.55;
+}
+
+.sponsor-bio a {
+  color: var(--color-clay);
+  text-decoration: none;
+}
+
+.sponsor-bio a:hover {
+  text-decoration: underline;
+}
+
+/* Tier cards */
+.sponsor-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tier-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-rule);
+  border-radius: 8px;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.tier-card:hover {
+  border-color: var(--color-clay);
+  transform: translateY(-2px);
+}
+
+.tier-card.tier-card-highlight {
+  border-color: var(--color-clay);
+  box-shadow: 0 4px 16px rgba(201, 122, 78, 0.08);
+}
+
+.tier-pill {
+  position: absolute;
+  top: -9px;
+  right: 12px;
+  background: var(--color-clay);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+.tier-top {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.tier-emoji {
+  font-size: 1rem;
+}
+
+.tier-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.tier-price {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.tier-period {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.tier-text {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  line-height: 1.45;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.tier-button {
+  display: block;
+  text-align: center;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  background: var(--color-bg-deep);
+  border: 1px solid var(--color-rule);
+  border-radius: 6px;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.tier-button:hover {
+  background: var(--color-rule);
+  text-decoration: none;
+}
+
+.tier-button.tier-button-primary {
+  background: var(--color-clay);
+  border-color: var(--color-clay);
+  color: #ffffff;
+}
+
+.tier-button.tier-button-primary:hover {
+  background: var(--color-clay-hover);
+  border-color: var(--color-clay-hover);
+}
+
+/* Footer row */
+.sponsor-footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-rule);
+}
+
+.sponsor-main-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #ea4aaa;
+  border-radius: 6px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.sponsor-main-btn:hover {
+  opacity: 0.92;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.sponsor-mail-link {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  transition: color var(--transition);
+}
+
+.sponsor-mail-link:hover {
+  color: var(--color-clay);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .sponsor-tiers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sponsor-footer-row {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .sponsor-main-btn {
+    justify-content: center;
+  }
+}
+
 /* ─── Footer ────────────────────────────────────────────────────── */
 .site-footer {
   border-top: 1px solid var(--color-rule);
